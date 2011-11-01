@@ -1,5 +1,5 @@
-# Install pre-requisites
-sudo apt-get install g++ curl libssl-dev apache2-utils git-core
+# Install pre-requisites and dependencies
+sudo apt-get install g++ curl libssl-dev apache2-utils git-core python-cairo python-django memcached python-memcache python-ldap python-twisted apache2 libapache2-mod-python
 
 # Download the Node source, compile and install it
 git clone https://github.com/joyent/node.git
@@ -40,8 +40,7 @@ cp carbon.conf.example carbon.conf
 # see: http://graphite.wikidot.com/getting-your-data-into-graphite
 cp storage-schemas.conf.example storage-schemas.conf
 
-# Install other graphite dependencies
-sudo apt-get install python-cairo python-django memcached python-memcache python-ldap python-twisted apache2 libapache2-mod-python
+# Install Graphite
 cd ~/graphite/graphite-web-0.9.9
 python setup.py install
 
